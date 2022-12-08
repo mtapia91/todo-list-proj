@@ -1,5 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDatepickerModule} from '@angular/material/datepicker';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +16,8 @@ import { TodoListItemComponent } from './todo-list-item/todo-list-item.component
 import { DrawerComponent } from './drawer/drawer.component';
 import { AppNavBarComponent } from './app-nav-bar/app-nav-bar.component';
 import { HamburgerMenuComponent } from './hamburger-menu/hamburger-menu.component';
+import { RouterModule } from '@angular/router';
+import { SideNavService } from './side-nav.service';
 
 @NgModule({
   declarations: [
@@ -24,9 +32,20 @@ import { HamburgerMenuComponent } from './hamburger-menu/hamburger-menu.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule.forRoot([
+      { path: 'app-add-todo-bar', component: AddTodoBarComponent },
+      { path: '', redirectTo: 'app-todo-list', pathMatch: 'full' },
+      { path: '**', redirectTo: 'app-todo-list', pathMatch: 'full' }
+    ]),
+    MatSidenavModule,
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatCheckboxModule,
+    MatDatepickerModule
   ],
-  providers: [],
+  providers: [SideNavService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

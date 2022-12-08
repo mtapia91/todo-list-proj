@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { SideNavService } from './side-nav.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todo-list-proj';
+  opened: boolean = false;
+
 }

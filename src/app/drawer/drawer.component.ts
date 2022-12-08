@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./drawer.component.css']
 })
 export class DrawerComponent {
-
+  events: string[] = [];
+  opened: boolean = false;
 }
