@@ -9,13 +9,10 @@ import { SideNavService } from '../side-nav.service';
 })
 
 export class HamburgerMenuComponent {
-  public isExpanded = true;
 
   constructor (private sideNavService: SideNavService) {}
 
-  ngOnInit(): void {
-    this.sideNavService.isSideNavOpen.subscribe((isSideNavOpen) => {
-    this.isExpanded = isSideNavOpen
-    });
+  hamburgerMenuClicked() {
+    this.sideNavService.openSideNav();
   }
 }

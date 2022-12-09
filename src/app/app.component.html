@@ -1,20 +1,9 @@
-<ng-container>
-  <app-app-nav-bar></app-app-nav-bar>
-</ng-container>
-
-<ng-container>
-  <app-add-todo-bar></app-add-todo-bar>
-</ng-container>
-
 <mat-sidenav-container class="example-container">
-  <mat-sidenav id="sidenav" #sidenav mode="push" [(opened)]="opened">
-    <app-drawer></app-drawer>
-  </mat-sidenav>
-
   <mat-sidenav-content>
-    <p><button mat-button (click)="sidenav.toggle()">Toggle Menu Button</button></p>
-      <div>
-        <app-todo-list></app-todo-list>
-      </div>
+    <div>
+      <app-app-nav-bar></app-app-nav-bar>
+      <app-add-todo-bar></app-add-todo-bar>
+      <app-todo-list></app-todo-list>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

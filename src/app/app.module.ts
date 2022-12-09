@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSidenavContainer, MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatDatepickerModule} from '@angular/material/datepicker';
+import { MatDatepicker, MatDatepickerModule} from '@angular/material/datepicker';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +18,12 @@ import { AppNavBarComponent } from './app-nav-bar/app-nav-bar.component';
 import { HamburgerMenuComponent } from './hamburger-menu/hamburger-menu.component';
 import { RouterModule } from '@angular/router';
 import { SideNavService } from './side-nav.service';
+import { DatePickerComponent } from './date-picker.component';
+import { MatButtonModule } from '@angular/material/button';
+import { CompletedComponent } from './pages/completed/completed.component';
+import { UncompletedComponent } from './pages/uncompleted/uncompleted.component';
+import { DeletedComponent } from './pages/deleted/deleted.component';
+
 
 @NgModule({
   declarations: [
@@ -27,14 +33,20 @@ import { SideNavService } from './side-nav.service';
     TodoListItemComponent,
     DrawerComponent,
     AppNavBarComponent,
-    HamburgerMenuComponent
+    HamburgerMenuComponent,
+    DatePickerComponent,
+    CompletedComponent,
+    UncompletedComponent,
+    DeletedComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
-      { path: 'app-add-todo-bar', component: AddTodoBarComponent },
+      { path: 'app-completed', component: CompletedComponent },
+      { path: 'app-uncompleted', component: UncompletedComponent },
+      { path: 'app-deleted', component: DeletedComponent },
       { path: '', redirectTo: 'app-todo-list', pathMatch: 'full' },
       { path: '**', redirectTo: 'app-todo-list', pathMatch: 'full' }
     ]),
@@ -43,9 +55,10 @@ import { SideNavService } from './side-nav.service';
     MatFormFieldModule,
     MatIconModule,
     MatCheckboxModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatButtonModule
   ],
-  providers: [SideNavService],
+  providers: [SideNavService, MatSidenavContainer, MatDatepicker],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

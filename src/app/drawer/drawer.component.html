@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<!-- Drawer will slide out when hamburger is clicked -->
+<mat-sidenav #sidenav hasBackdrop="false" mode="push" [opened]="isExpanded">
+  <button mat-icon-button (click)="drawerClose()">
+    <mat-icon>close</mat-icon>
+  </button><br>
+  <a routerLink="/app-completed" routerLinkActive="active" ariaCurrentWhenActive="page">Completed</a><br>
+  <a routerLink="/app-uncompleted" routerLinkActive="active" ariaCurrentWhenActive="page">Uncompleted</a><br>
+  <a routerLink="/app-deleted" routerLinkActive="active" ariaCurrentWhenActive="page">Deleted</a><br>
+</mat-sidenav>
+
