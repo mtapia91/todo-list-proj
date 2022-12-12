@@ -10,25 +10,30 @@ import { MatDatepicker, MatDatepickerModule} from '@angular/material/datepicker'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AddTodoBarComponent } from './add-todo-bar/add-todo-bar.component';
-import { TodoListComponent } from './todo-list/todo-list.component';
-import { TodoListItemComponent } from './todo-list-item/todo-list-item.component';
-import { DrawerComponent } from './drawer/drawer.component';
-import { AppNavBarComponent } from './app-nav-bar/app-nav-bar.component';
-import { HamburgerMenuComponent } from './hamburger-menu/hamburger-menu.component';
+
 import { RouterModule } from '@angular/router';
 import { SideNavService } from './side-nav.service';
-import { DatePickerComponent } from './date-picker.component';
+
 import { MatButtonModule } from '@angular/material/button';
 import { CompletedComponent } from './pages/completed/completed.component';
 import { UncompletedComponent } from './pages/uncompleted/uncompleted.component';
 import { DeletedComponent } from './pages/deleted/deleted.component';
 
+import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { TodoListItemComponent } from './components/todo-list-item/todo-list-item.component';
+import { DrawerComponent } from './components/drawer/drawer.component';
+import { AppNavBarComponent } from './components/app-nav-bar/app-nav-bar.component';
+import { HamburgerMenuComponent } from './components/hamburger-menu/hamburger-menu.component';
+import { DatePickerComponent } from './components/date-picker/date-picker.component';
+import { AddItemBarComponent } from './components/add-item-bar/add-item-bar.component';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddTodoBarComponent,
+    AddItemBarComponent,
     TodoListComponent,
     TodoListItemComponent,
     DrawerComponent,
@@ -44,9 +49,9 @@ import { DeletedComponent } from './pages/deleted/deleted.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
-      { path: 'app-completed', component: CompletedComponent },
-      { path: 'app-uncompleted', component: UncompletedComponent },
-      { path: 'app-deleted', component: DeletedComponent },
+      { path: 'completed', component: CompletedComponent },
+      { path: 'uncompleted', component: UncompletedComponent },
+      { path: 'deleted', component: DeletedComponent },
       { path: '', redirectTo: 'app-todo-list', pathMatch: 'full' },
       { path: '**', redirectTo: 'app-todo-list', pathMatch: 'full' }
     ]),

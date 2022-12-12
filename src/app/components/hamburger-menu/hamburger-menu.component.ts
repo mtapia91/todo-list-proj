@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { SideNavService } from '../side-nav.service';
+import { SideNavService } from 'src/app/side-nav.service';
+
 
 
 @Component({

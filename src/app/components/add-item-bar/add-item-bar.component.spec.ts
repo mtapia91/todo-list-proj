@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddTodoBarComponent } from './add-todo-bar.component';
+import { AddItemBarComponent } from './add-item-bar.component';
 
-describe('AddTodoBarComponent', () => {
-  let component: AddTodoBarComponent;
-  let fixture: ComponentFixture<AddTodoBarComponent>;
+describe('AddItemBarComponent', () => {
+  let component: AddItemBarComponent;
+  let fixture: ComponentFixture<AddItemBarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddTodoBarComponent ]
+      declarations: [ AddItemBarComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AddTodoBarComponent);
+    fixture = TestBed.createComponent(AddItemBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
