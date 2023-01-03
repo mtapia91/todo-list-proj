@@ -5,7 +5,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatDatepicker, MatDatepickerModule} from '@angular/material/datepicker';
+import { MatDatepicker, MatDatepickerModule } from '@angular/material/datepicker';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -22,7 +22,10 @@ import { AppNavBarComponent } from './components/app-nav-bar/app-nav-bar.compone
 import { HamburgerMenuComponent } from './components/hamburger-menu/hamburger-menu.component';
 import { DatePickerComponent } from './components/date-picker/date-picker.component';
 import { AddItemBarComponent } from './components/add-item-bar/add-item-bar.component';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 @NgModule({
@@ -38,11 +41,14 @@ import {MatInputModule} from '@angular/material/input';
     CompletedComponent,
     UncompletedComponent,
     DeletedComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: 'completed', component: CompletedComponent },
       { path: 'uncompleted', component: UncompletedComponent },
@@ -50,14 +56,16 @@ import {MatInputModule} from '@angular/material/input';
       { path: '', redirectTo: 'app-todo-list', pathMatch: 'full' },
       { path: '**', redirectTo: 'app-todo-list', pathMatch: 'full' }
     ]),
-    MatSidenavModule,
-    MatInputModule,
-    MatToolbarModule,
-    MatFormFieldModule,
-    MatIconModule,
+    MatButtonModule,
     MatCheckboxModule,
     MatDatepickerModule,
-    MatButtonModule
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatNativeDateModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    ReactiveFormsModule
   ],
   providers: [SideNavService, MatSidenavContainer, MatDatepicker],
   bootstrap: [AppComponent]

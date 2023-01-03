@@ -1,11 +1,17 @@
+.mat-toolbar {
+  height: 100px;
+}
+
 .background {
-  background-color: black;
+  background-color: #303030;
 }
 
-.text-color {
-  font: white;
+.form {
+  min-width: 20%;
+  max-width: 70%;
+  width: 100%;
 }
 
-.example-spacer {
-  flex: 1 1 1;
+.full-width {
+  width: 100%;
 }

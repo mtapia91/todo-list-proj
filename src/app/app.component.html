@@ -1,9 +1,12 @@
-<mat-sidenav-container class="example-container">
+<!-- <div>
   <mat-sidenav-content>
-    <div>
-      <app-app-nav-bar></app-app-nav-bar>
-      <app-add-item-bar></app-add-item-bar>
-      <app-todo-list></app-todo-list>
-    </div>
+
   </mat-sidenav-content>
-</mat-sidenav-container>
+</div> -->
+<div>
+  <mat-sidenav-container class="example-container">
+    <app-app-nav-bar></app-app-nav-bar>
+    <app-add-item-bar></app-add-item-bar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-container>
+</div>

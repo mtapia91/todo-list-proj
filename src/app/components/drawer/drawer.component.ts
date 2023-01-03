@@ -20,7 +20,6 @@ export class DrawerComponent implements OnInit{
   }
 
   drawerClose() {
-    console.log("within drawerClose()");
     this.sideNavService.closeSideNav();
   }
 

@@ -1,6 +1,9 @@
-<mat-toolbar>
-  <input matInput placeholder="What needs to be done?" required>
-  <button class="button example-spacer" type="submit">Submit</button>
-  <!-- Date Picker, once working and available needs to be nested here -->
-  <app-date-picker></app-date-picker>
-</mat-toolbar>
+<mat-toolbar class="background text-color">
+  <form class="form">
+    <mat-form-field class="full-width">
+      <input matInput value="What needs to be done?">
+      <mat-hint>Please click submit to save the todo</mat-hint>
+      <button class="button spacer" type="submit">Submit</button>
+    </mat-form-field>
+    <!-- Date Picker, once working and available needs to be nested here -->
+    <app-date-picker></app-date-picker>
