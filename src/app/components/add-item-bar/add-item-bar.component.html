@@ -1,9 +1,12 @@
-<mat-toolbar class="background text-color">
-  <form class="form">
-    <mat-form-field class="full-width">
-      <input matInput value="What needs to be done?">
-      <mat-hint>Please click submit to save the todo</mat-hint>
-      <button class="button spacer" type="submit">Submit</button>
-    </mat-form-field>
-    <!-- Date Picker, once working and available needs to be nested here -->
-    <app-date-picker></app-date-picker>
+<div>
+  <mat-toolbar class="background text-color">
+    <form class="form">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="What needs to be done?">
+          <mat-hint class="">Please click submit to save the todo</mat-hint>
+      </mat-form-field>
+    <button class="border-radius rounded-circle" type="submit">Submit</button>
+  </form>
+  <app-date-picker></app-date-picker>
+  </mat-toolbar>
+</div>
